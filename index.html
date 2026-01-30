@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KB4ZQZG4');</script>
-<!-- End Google Tag Manager -->
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BLV06FW15K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KB4ZQZG4');</script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLV06FW15K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BLV06FW15K');
+    </script>
+         
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7891354051745772" crossorigin="anonymous"></script>
 
-  gtag('config', 'G-BLV06FW15K');
-</script>
-     
-<!-- Adsense -->     
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7891354051745772"
-     crossorigin="anonymous"></script>
- <!-- MS Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "uzwv3ao0gn");
-</script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "uzwv3ao0gn");
+    </script>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Lens & Latitude | Khilesh Sammal</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         :root {
             --bg-color: #0a0a0a;
@@ -48,25 +48,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         .serif { font-family: 'Playfair Display', serif; }
         .ui-font { font-family: 'Montserrat', sans-serif; }
 
-        header {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-        }
-
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #ffffff;
-            font-weight: 600;
         }
         .nav-link::after {
             content: '';
@@ -78,282 +69,265 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: var(--accent);
             transition: width 0.3s ease;
         }
-        .nav-link:hover { color: var(--accent); }
         .nav-link:hover::after { width: 100%; }
 
-        .hero-gradient {
-            background: linear-gradient(to bottom, rgba(10,10,10,0) 0%, rgba(10,10,10,1) 100%);
-        }
-
         .story-card {
-            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            overflow: hidden;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            will-change: transform, opacity;
         }
-        .story-card:hover { transform: translateY(-5px); z-index: 10; }
         .story-card img {
-            transition: transform 0.8s ease;
+            transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1), filter 1.2s ease;
             filter: grayscale(30%);
+            backface-visibility: hidden;
         }
-        .story-card:hover img {
-            transform: scale(1.1);
-            filter: grayscale(0%);
-        }
-
-        .shop-card:hover {
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.15);
-            border-color: var(--accent);
-        }
-
-        .text-accent { color: var(--accent); }
-        .border-accent { border-color: var(--accent); }
-        
-        .icon-sm { width: 14px; height: 14px; }
-
-        /* Custom spacing for the 5-column grid on desktop */
-        @media (min-width: 1024px) {
-            .grid-cols-5 {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
+        @media (hover: hover) {
+            .story-card:hover img {
+                transform: scale(1.08);
+                filter: grayscale(0%);
             }
         }
 
-        .social-card {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            transition: all 0.4s ease;
-        }
-        .social-card:hover {
-            border-color: var(--accent);
-            background: #111;
+        .filter-btn.active {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 3.5rem !important; line-height: 1.1; }
-            .section-padding { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .icon-sm { width: 14px; height: 14px; }
+        
+        .view-btn {
+            font-size: 11.7px;
+            padding: 10.4px 20.8px;
+            min-height: 44px; /* Improved touch target */
+            display: inline-flex;
+            align-items: center;
         }
+
+        /* FAQ Transition Styles - Optimized for Mobile Performance */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            will-change: max-height, opacity;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 800px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1.25rem;
+        }
+        .faq-item.active .faq-chevron {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        /* Prevent Layout Shift on Header */
+        header { transform: translateZ(0); }
     </style>
 </head>
-<body>
-     
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB4ZQZG4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body class="antialiased">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB4ZQZG4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      
     <!-- Header -->
-    <header class="fixed w-full z-50 px-6 py-4 md:px-12 md:py-6 flex justify-between items-center transition-all duration-300">
+    <header id="main-header" class="fixed w-full z-50 px-4 py-3 md:px-12 md:py-6 flex justify-between items-center bg-gradient-to-b from-black/95 to-transparent transition-all duration-300">
         <div class="flex items-center space-x-3 md:space-x-5">
-            <div class="text-2xl md:text-3xl font-bold tracking-tighter ui-font text-white border-b-2 border-accent leading-none pb-1">KS</div>
+            <div class="text-xl md:text-3xl font-bold tracking-tighter ui-font text-white border-b-2 border-[#ffcc00] leading-none pb-1">KS</div>
             <div class="hidden sm:block h-8 w-[1px] bg-white/40"></div>
             <div class="hidden sm:block text-[10px] md:text-sm font-bold ui-font uppercase tracking-[0.4em] text-white">Lens & Latitude</div>
         </div>
         
         <nav class="hidden lg:flex space-x-8 xl:space-x-10 text-[11px] uppercase tracking-[0.25em] ui-font">
-            <a href="#about" class="nav-link"><i data-lucide="user" class="icon-sm text-accent"></i> About</a>
-            <a href="#directory" class="nav-link"><i data-lucide="map-pin" class="icon-sm text-accent"></i> Destinations</a>
-            <a href="#blog" class="nav-link"><i data-lucide="book-open" class="icon-sm text-accent"></i> Blog</a>
-            <a href="#shop" class="nav-link"><i data-lucide="shopping-bag" class="icon-sm text-accent"></i> Shop</a>
-            <a href="#contact" class="nav-link"><i data-lucide="mail" class="icon-sm text-accent"></i> Contact</a>
+            <a href="#about" class="nav-link flex items-center gap-2 text-white font-semibold hover:text-[#ffcc00]"><i data-lucide="user" class="icon-sm text-[#ffcc00]"></i> About</a>
+            <a href="#directory" class="nav-link flex items-center gap-2 text-white font-semibold hover:text-[#ffcc00]"><i data-lucide="map-pin" class="icon-sm text-[#ffcc00]"></i> Destinations</a>
+            <a href="#blog" class="nav-link flex items-center gap-2 text-white font-semibold hover:text-[#ffcc00]"><i data-lucide="book-open" class="icon-sm text-[#ffcc00]"></i> Blog</a>
+            <a href="#shop" class="nav-link flex items-center gap-2 text-white font-semibold hover:text-[#ffcc00]"><i data-lucide="shopping-bag" class="icon-sm text-[#ffcc00]"></i> Shop</a>
+            <a href="#contact" class="nav-link flex items-center gap-2 text-white font-semibold hover:text-[#ffcc00]"><i data-lucide="mail" class="icon-sm text-[#ffcc00]"></i> Contact</a>
         </nav>
 
-        <button class="lg:hidden text-white flex items-center gap-2 text-[10px] font-bold ui-font tracking-widest bg-black/50 px-4 py-2 rounded-sm border border-white/10">
+        <button aria-label="Menu" class="lg:hidden text-white flex items-center gap-2 text-[10px] font-bold ui-font tracking-widest bg-black/60 backdrop-blur-sm px-3 py-2 rounded-sm border border-white/10 active:bg-white/20 transition-colors">
             <i data-lucide="menu" class="w-4 h-4"></i> MENU
         </button>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative h-[100dvh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1596642240875-da7d44fe845f?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover opacity-60" alt="Travel Background">
-            <div class="absolute inset-0 hero-gradient"></div>
+            <img src="https://images.unsplash.com/photo-1596642240875-da7d44fe845f?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover opacity-60" alt="Travel Background" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-[#0a0a0a]"></div>
         </div>
         
-        <div class="relative z-10 text-center px-6">
-            <h1 class="hero-title text-5xl md:text-8xl serif italic mb-4 text-white">Lens & Latitude</h1>
-            <p class="text-[10px] md:text-base uppercase tracking-[0.3em] md:tracking-[0.5em] text-accent font-bold ui-font">Documenting the Unseen — 2025 - ∞</p>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="text-4xl xs:text-5xl md:text-8xl serif italic mb-4 text-white drop-shadow-lg">Lens & Latitude</h1>
+            <p class="text-[9px] md:text-base uppercase tracking-[0.2em] md:tracking-[0.5em] text-[#ffcc00] font-bold ui-font">Documenting the Unseen — 2025 - ∞</p>
             <div class="mt-8 md:mt-10 flex justify-center space-x-6 md:space-x-8 text-white">
-                 <a href="https://www.instagram.com/mr.khilesh__" target="_blank" class="hover:text-accent transition-all transform hover:scale-110"><i data-lucide="instagram" class="w-5 h-5 md:w-6 md:h-6"></i></a>
-                 <a href="https://www.youtube.com/c/KhileshSammalVlogs2125" target="_blank" class="hover:text-accent transition-all transform hover:scale-110"><i data-lucide="youtube" class="w-5 h-5 md:w-6 md:h-6"></i></a>
-                 <a href="#" class="hover:text-accent transition-all transform hover:scale-110"><i data-lucide="camera" class="w-5 h-5 md:w-6 md:h-6"></i></a>
+                 <a href="https://www.instagram.com/mr.khilesh__" target="_blank" aria-label="Instagram" class="hover:text-[#ffcc00] transition-all transform hover:scale-110 p-2"><i data-lucide="instagram" class="w-5 h-5 md:w-6 md:h-6"></i></a>
+                 <a href="https://www.youtube.com/c/KhileshSammalVlogs2125" target="_blank" aria-label="YouTube" class="hover:text-[#ffcc00] transition-all transform hover:scale-110 p-2"><i data-lucide="youtube" class="w-5 h-5 md:w-6 md:h-6"></i></a>
+                 <a href="#" aria-label="Photography" class="hover:text-[#ffcc00] transition-all transform hover:scale-110 p-2"><i data-lucide="camera" class="w-5 h-5 md:w-6 md:h-6"></i></a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 md:py-24 px-6 md:px-24 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <section id="about" class="py-16 md:py-32 px-5 md:px-24 grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-7xl mx-auto">
         <div class="order-2 md:order-1">
-            <span class="text-accent uppercase tracking-widest text-[10px] md:text-xs font-bold mb-4 block flex items-center gap-2 ui-font">
+            <span class="text-[#ffcc00] uppercase tracking-widest text-[10px] md:text-xs font-bold mb-4 flex items-center gap-2 ui-font">
                 <i data-lucide="pen-tool" class="icon-sm"></i> The Editor
             </span>
-            <h2 class="text-3xl md:text-6xl serif mb-6 md:mb-8 leading-tight">Capturing the rhythm of global wanderlust.</h2>
-            <p class="text-dim leading-relaxed text-base md:text-lg mb-6">
+            <h2 class="text-3xl md:text-6xl serif mb-5 md:mb-8 leading-tight">Capturing the rhythm of global wanderlust.</h2>
+            <p class="text-[#a0a0a0] leading-relaxed text-base md:text-lg mb-6">
                 I’m Khilesh Sammal, a full-time engineer turned professional performance marketer and part-time traveler. Through slow journeys and visual storytelling, I explore places beyond the surface — from Himalayan trails to tropical islands.
             </p>
-            <a href="https://khilesh-about-me.vercel.app/" class="inline-flex items-center gap-2 border-b-2 border-accent pb-1 text-[10px] md:text-sm uppercase tracking-widest font-bold ui-font hover:text-accent transition-colors">
+            <a href="https://khilesh-about-me.vercel.app/" class="inline-flex items-center gap-2 border-b-2 border-[#ffcc00] pb-1 text-[10px] md:text-sm uppercase tracking-widest font-bold ui-font hover:text-[#ffcc00] transition-colors">
                 Read Full Bio <i data-lucide="arrow-right" class="icon-sm"></i>
             </a>
         </div>
-        <div class="relative order-1 md:order-2">
-            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=80" class="rounded-sm shadow-2xl w-full h-auto" alt="Khilesh">
+        <div class="relative order-1 md:order-2 overflow-hidden rounded-sm group">
+            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=80" class="shadow-2xl w-full h-auto group-hover:scale-105 transition-transform duration-1000" alt="Khilesh" loading="lazy" decoding="async">
         </div>
     </section>
 
     <!-- Directory -->
     <section id="directory" class="py-16 md:py-24 bg-[#0f0f0f]">
-        <div class="px-6 md:px-24 mb-10 md:mb-12">
-            <h2 class="text-3xl md:text-5xl serif">The Directory</h2>
-            <p class="text-accent mt-2 text-xs md:text-sm italic flex items-center gap-2 ui-font font-semibold">
+        <div class="px-5 md:px-24 mb-10 md:mb-12 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl serif mb-2">The Directory</h2>
+            <p class="text-[#ffcc00] mb-8 text-xs md:text-sm italic flex items-center gap-2 ui-font font-semibold">
                 <i data-lucide="compass" class="icon-sm"></i> A curated archive of expeditions
             </p>
+            
+            <div class="flex items-center space-x-6 text-[10px] md:text-xs font-bold ui-font uppercase tracking-widest overflow-x-auto pb-2 no-scrollbar">
+                <button data-filter="all" class="filter-btn active pb-1 whitespace-nowrap transition-all hover:text-[#ffcc00]">All</button>
+                <button data-filter="international" class="filter-btn pb-1 whitespace-nowrap transition-all hover:text-[#ffcc00]">International</button>
+                <button data-filter="india" class="filter-btn pb-1 whitespace-nowrap transition-all hover:text-[#ffcc00]">India</button>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0.5 bg-zinc-800 border-y border-zinc-800">
-            <!-- Thailand -->
-            <div class="story-card relative aspect-[4/5] bg-black group">
-                <img src="https://images.unsplash.com/photo-1681459878397-14dc6d270fe4?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/20 to-transparent">
-                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-accent font-bold ui-font">Paradise Phuket </span>
+        <div id="directory-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-0.5 bg-zinc-800 border-y border-zinc-800">
+            <!-- 2026 Placeholder -->
+            <div class="story-card relative aspect-[4/5] bg-zinc-900 flex items-center justify-center text-center p-6" data-category="international">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full border border-[#ffcc00]/30 flex items-center justify-center mb-4">
+                        <i data-lucide="calendar" class="text-[#ffcc00] w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl serif text-zinc-300">The Next Chapter</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-[#ffcc00] mt-2 ui-font font-bold">Dropping Q3 2026</p>
+                </div>
+            </div>
+
+            <!-- 2025 Trips -->
+            <div class="story-card relative aspect-[4/5] bg-black group overflow-hidden" data-category="international">
+                <img src="https://images.unsplash.com/photo-1681459878397-14dc6d270fe4?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent">
+                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-[#ffcc00] font-bold ui-font">Paradise Phuket </span>
                     <h3 class="text-xl serif mb-4 leading-tight">Thailand Diaries - 2025</h3>
-                    <a href="https://thailand-trip-delta.vercel.app/" target="_blank" class="text-[9px] font-bold ui-font uppercase tracking-widest border border-white/40 px-4 py-2 hover:bg-white hover:text-black transition-all w-fit flex items-center gap-2">
-                        View <i data-lucide="eye" class="w-3 h-3"></i>
+                    <a href="https://thailand-trip-delta.vercel.app/" target="_blank" class="view-btn font-bold ui-font uppercase tracking-widest border border-white/40 active:bg-white active:text-black transition-all w-fit flex items-center gap-2">
+                        View <i data-lucide="eye" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Malaysia -->
-            <div class="story-card relative aspect-[4/5] bg-black group">
-                <img src="https://images.unsplash.com/photo-1580496297468-1e05179cfd81?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/20 to-transparent">
-                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-accent font-bold ui-font">Cultural Hub</span>
+            <div class="story-card relative aspect-[4/5] bg-black group overflow-hidden" data-category="international">
+                <img src="https://images.unsplash.com/photo-1580496297468-1e05179cfd81?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent">
+                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-[#ffcc00] font-bold ui-font">Cultural Hub</span>
                     <h3 class="text-xl serif mb-4 leading-tight">The Malaysia Expedition - 2025 </h3>
-                    <a href="https://malaysia-trip.vercel.app/" target="_blank" class="text-[9px] font-bold ui-font uppercase tracking-widest border border-white/40 px-4 py-2 hover:bg-white hover:text-black transition-all w-fit flex items-center gap-2">
-                        View <i data-lucide="eye" class="w-3 h-3"></i>
+                    <a href="https://malaysia-trip.vercel.app/" target="_blank" class="view-btn font-bold ui-font uppercase tracking-widest border border-white/40 active:bg-white active:text-black transition-all w-fit flex items-center gap-2">
+                        View <i data-lucide="eye" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
             
-            <!-- Amritsar -->
-            <div class="story-card relative aspect-[4/5] bg-black group">
-                <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/20 to-transparent">
-                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-accent font-bold ui-font">Punjab</span>
+            <div class="story-card relative aspect-[4/5] bg-black group overflow-hidden" data-category="india">
+                <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent">
+                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-[#ffcc00] font-bold ui-font">Punjab</span>
                     <h3 class="text-xl serif mb-4 leading-tight">Amritsar Grace - 2025 </h3>
-                    <a href="#" class="text-[9px] font-bold ui-font uppercase tracking-widest border border-white/40 px-4 py-2 hover:bg-white hover:text-black transition-all w-fit flex items-center gap-2">
-                        View <i data-lucide="eye" class="w-3 h-3"></i>
+                    <a href="#" class="view-btn font-bold ui-font uppercase tracking-widest border border-white/40 active:bg-white active:text-black transition-all w-fit flex items-center gap-2">
+                        View <i data-lucide="eye" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Kerala -->
-            <div class="story-card relative aspect-[4/5] bg-black group">
-                <img src="https://images.unsplash.com/photo-1695180289266-9dbe35c73a66?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/20 to-transparent">
-                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-accent font-bold ui-font">Southern Soul</span>
+            <div class="story-card relative aspect-[4/5] bg-black group overflow-hidden" data-category="india">
+                <img src="https://images.unsplash.com/photo-1695180289266-9dbe35c73a66?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent">
+                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-[#ffcc00] font-bold ui-font">Southern Soul</span>
                     <h3 class="text-xl serif mb-4 leading-tight">Kerala Backwaters - 2025</h3>
-                    <a href="#" class="text-[9px] font-bold ui-font uppercase tracking-widest border border-white/40 px-4 py-2 hover:bg-white hover:text-black transition-all w-fit flex items-center gap-2">
-                        View <i data-lucide="eye" class="w-3 h-3"></i>
+                    <a href="#" class="view-btn font-bold ui-font uppercase tracking-widest border border-white/40 active:bg-white active:text-black transition-all w-fit flex items-center gap-2">
+                        View <i data-lucide="eye" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
                         
-            <!-- Patal Bhuvneswar -->
-            <div class="story-card relative aspect-[4/5] bg-black group">
-                <img src="https://images.unsplash.com/photo-1714744715493-ad89b7ff503e?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/20 to-transparent">
-                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-accent font-bold ui-font">Uttarakhand</span>
+            <div class="story-card relative aspect-[4/5] bg-black group overflow-hidden" data-category="india">
+                <img src="https://images.unsplash.com/photo-1714744715493-ad89b7ff503e?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent">
+                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-[#ffcc00] font-bold ui-font">Uttarakhand</span>
                     <h3 class="text-xl serif mb-4 leading-tight">Patal Bhuwneswar - 2025 </h3>
-                    <a href="https://patal-bhuvneswar.vercel.app/" target="_blank" class="text-[9px] font-bold ui-font uppercase tracking-widest border border-white/40 px-4 py-2 hover:bg-white hover:text-black transition-all w-fit flex items-center gap-2">
-                        View <i data-lucide="eye" class="w-3 h-3"></i>
+                    <a href="https://patal-bhuvneswar.vercel.app/" target="_blank" class="view-btn font-bold ui-font uppercase tracking-widest border border-white/40 active:bg-white active:text-black transition-all w-fit flex items-center gap-2">
+                        View <i data-lucide="eye" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- GOA -->
-            <div class="story-card relative aspect-[4/5] bg-black group">
-                <img src="https://images.unsplash.com/photo-1582972236019-ea4af5ffe587?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/20 to-transparent">
-                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-accent font-bold ui-font">GOA</span>
-                    <h3 class="text-xl serif mb-4 leading-tight">Goa - 2024 </h3>
-                    <a href="https://rishikesh-orpin.vercel.app/" target="_blank" class="text-[9px] font-bold ui-font uppercase tracking-widest border border-white/40 px-4 py-2 hover:bg-white hover:text-black transition-all w-fit flex items-center gap-2">
-                        View <i data-lucide="eye" class="w-3 h-3"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Rishikesh -->
-            <div class="story-card relative aspect-[4/5] bg-black group">
-                <img src="https://images.unsplash.com/photo-1716573260891-23ad993e8833?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/20 to-transparent">
-                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-accent font-bold ui-font">Uttarakhand</span>
+            <div class="story-card relative aspect-[4/5] bg-black group overflow-hidden" data-category="india">
+                <img src="https://images.unsplash.com/photo-1716573260891-23ad993e8833?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent">
+                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-[#ffcc00] font-bold ui-font">Uttarakhand</span>
                     <h3 class="text-xl serif mb-4 leading-tight">Rishikesh - 2025 </h3>
-                    <a href="https://rishikesh-orpin.vercel.app/" target="_blank" class="text-[9px] font-bold ui-font uppercase tracking-widest border border-white/40 px-4 py-2 hover:bg-white hover:text-black transition-all w-fit flex items-center gap-2">
-                        View <i data-lucide="eye" class="w-3 h-3"></i>
+                    <a href="https://rishikesh-orpin.vercel.app/" target="_blank" class="view-btn font-bold ui-font uppercase tracking-widest border border-white/40 active:bg-white active:text-black transition-all w-fit flex items-center gap-2">
+                        View <i data-lucide="eye" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="story-card relative aspect-[4/5] bg-zinc-900/50 flex items-center justify-center text-center p-6 grayscale">
-                <div class="flex flex-col items-center">
-                    <i data-lucide="camera" class="mb-4 text-zinc-600 w-8 h-8"></i>
-                    <h3 class="text-lg serif text-zinc-500 italic">Photo Expeditions</h3>
-                    <p class="text-[9px] uppercase tracking-widest text-zinc-700 mt-2 ui-font font-bold">Planned 2025</p>
-                </div>
-            </div>
-
-            <div class="story-card relative aspect-[4/5] bg-zinc-900/50 flex items-center justify-center text-center p-6 grayscale">
-                <div class="flex flex-col items-center">
-                    <i data-lucide="sun" class="mb-4 text-zinc-600 w-8 h-8"></i>
-                    <h3 class="text-lg serif text-zinc-500 italic">Bali Slow Living</h3>
-                    <p class="text-[9px] uppercase tracking-widest text-zinc-700 mt-2 ui-font font-bold">Planned 2025</p>
-                </div>
-            </div>
-
-            <div class="story-card relative aspect-[4/5] bg-zinc-900 flex items-center justify-center text-center p-6">
-                <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center mb-4">
-                        <i data-lucide="calendar" class="text-accent w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl serif text-zinc-300">The Next Chapter</h3>
-                    <p class="text-[10px] uppercase tracking-widest text-accent mt-2 ui-font font-bold">Dropping Q3 2025</p>
+            <!-- 2024 Trips -->
+            <div class="story-card relative aspect-[4/5] bg-black group overflow-hidden" data-category="india">
+                <img src="https://images.unsplash.com/photo-1582972236019-ea4af5ffe587?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent">
+                    <span class="text-[10px] uppercase tracking-[0.3em] mb-1 text-[#ffcc00] font-bold ui-font">GOA</span>
+                    <h3 class="text-xl serif mb-4 leading-tight">Goa - 2024 </h3>
+                    <a href="https://rishikesh-orpin.vercel.app/" target="_blank" class="view-btn font-bold ui-font uppercase tracking-widest border border-white/40 active:bg-white active:text-black transition-all w-fit flex items-center gap-2">
+                        View <i data-lucide="eye" class="w-4 h-4"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="py-16 md:py-24 px-6 md:px-24">
-        <div class="mb-12 md:mb-16">
+    <section id="blog" class="py-16 md:py-32 px-5 md:px-24 max-w-7xl mx-auto">
+        <div class="mb-10 md:mb-16">
             <h2 class="text-3xl md:text-4xl serif mb-2">The Journal</h2>
-            <p class="text-accent text-xs md:text-sm italic ui-font font-medium">Detailed guides and personal notes.</p>
+            <p class="text-[#ffcc00] text-xs md:text-sm italic ui-font font-medium">Detailed guides and personal notes.</p>
         </div>
         
-        <div class="grid md:grid-cols-2 gap-10 md:gap-12">
+        <div class="grid md:grid-cols-2 gap-10 md:gap-16">
             <article class="group cursor-pointer">
-                <div class="aspect-video overflow-hidden mb-6 rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="aspect-video overflow-hidden mb-5 rounded-sm bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105" loading="lazy" decoding="async" alt="Blog Post">
                 </div>
-                <div class="flex items-center space-x-3 md:space-x-4 mb-3 text-[9px] md:text-[10px] uppercase tracking-widest text-accent font-bold ui-font">
+                <div class="flex items-center space-x-3 mb-3 text-[9px] uppercase tracking-widest text-[#ffcc00] font-bold ui-font">
                     <span class="flex items-center gap-1"><i data-lucide="tag" class="icon-sm"></i> Travel Tips</span>
                     <span class="w-1 h-1 bg-zinc-700 rounded-full"></span>
-                    <span class="text-dim font-normal flex items-center gap-1"><i data-lucide="clock" class="icon-sm"></i> 5 Min Read</span>
+                    <span class="text-[#a0a0a0] font-normal flex items-center gap-1"><i data-lucide="clock" class="icon-sm"></i> 5 Min Read</span>
                 </div>
-                <h3 class="text-xl md:text-2xl serif mb-4 group-hover:italic transition-all leading-tight">How to pack for a 30-day Solo Trip across SE Asia</h3>
-                <a href="#" class="text-[10px] uppercase tracking-widest font-bold border-b-2 border-zinc-800 pb-1 hover:text-accent hover:border-accent inline-flex items-center gap-2 ui-font">
+                <h3 class="text-xl md:text-2xl serif mb-4 leading-tight transition-all">How to pack for a 30-day Solo Trip across SE Asia</h3>
+                <a href="#" class="text-[10px] uppercase tracking-widest font-bold border-b-2 border-zinc-800 pb-1 hover:text-[#ffcc00] hover:border-[#ffcc00] inline-flex items-center gap-2 ui-font transition-all">
                     Read Post <i data-lucide="chevron-right" class="icon-sm"></i>
                 </a>
             </article>
 
             <article class="group cursor-pointer">
-                <div class="aspect-video overflow-hidden mb-6 rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="aspect-video overflow-hidden mb-5 rounded-sm bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105" loading="lazy" decoding="async" alt="Blog Post">
                 </div>
-                <div class="flex items-center space-x-3 md:space-x-4 mb-3 text-[9px] md:text-[10px] uppercase tracking-widest text-accent font-bold ui-font">
+                <div class="flex items-center space-x-3 mb-3 text-[9px] uppercase tracking-widest text-[#ffcc00] font-bold ui-font">
                     <span class="flex items-center gap-1"><i data-lucide="camera" class="icon-sm"></i> Photography</span>
                     <span class="w-1 h-1 bg-zinc-700 rounded-full"></span>
-                    <span class="text-dim font-normal flex items-center gap-1"><i data-lucide="clock" class="icon-sm"></i> 8 Min Read</span>
+                    <span class="text-[#a0a0a0] font-normal flex items-center gap-1"><i data-lucide="clock" class="icon-sm"></i> 8 Min Read</span>
                 </div>
-                <h3 class="text-xl md:text-2xl serif mb-4 group-hover:italic transition-all leading-tight">My 2025 Camera Gear: Capturing Luxury in Motion</h3>
-                <a href="#" class="text-[10px] uppercase tracking-widest font-bold border-b-2 border-zinc-800 pb-1 hover:text-accent hover:border-accent inline-flex items-center gap-2 ui-font">
+                <h3 class="text-xl md:text-2xl serif mb-4 leading-tight transition-all">My 2025 Camera Gear: Capturing Luxury in Motion</h3>
+                <a href="#" class="text-[10px] uppercase tracking-widest font-bold border-b-2 border-zinc-800 pb-1 hover:text-[#ffcc00] hover:border-[#ffcc00] inline-flex items-center gap-2 ui-font transition-all">
                     Read Post <i data-lucide="chevron-right" class="icon-sm"></i>
                 </a>
             </article>
@@ -361,126 +335,230 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- Shop Section -->
-    <section id="shop" class="py-16 md:py-24 bg-[#050505] px-6 md:px-24">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-3xl md:text-4xl serif mb-2 uppercase tracking-tighter">The Travel Shop</h2>
-            <p class="text-accent text-[10px] md:text-sm tracking-widest uppercase flex items-center justify-center gap-2 ui-font font-bold">
-                <i data-lucide="sparkles" class="icon-sm"></i> Curated Essentials
-            </p>
+    <section id="shop" class="py-16 md:py-32 bg-[#050505] px-5 md:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-3xl md:text-4xl serif mb-2 uppercase tracking-tighter">The Travel Shop</h2>
+                <p class="text-[#ffcc00] text-[10px] md:text-sm tracking-widest uppercase flex items-center justify-center gap-2 ui-font font-bold">
+                    <i data-lucide="sparkles" class="icon-sm"></i> Curated Essentials
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Products -->
+                <div class="group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-300 rounded-sm hover:border-[#ffcc00]">
+                    <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform" loading="lazy" decoding="async" alt="Product">
+                    </div>
+                    <h4 class="text-sm serif mb-1 font-bold">Nomad Backpack v1</h4>
+                    <p class="text-[12px] text-[#ffcc00] font-bold mb-4 ui-font">₹4,999</p>
+                    <button class="w-full py-4 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 active:bg-[#ffcc00] active:text-black md:hover:bg-[#ffcc00] md:hover:text-black transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="icon-sm"></i> Add to Cart
+                    </button>
+                </div>
+
+                <div class="group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-300 rounded-sm hover:border-[#ffcc00]">
+                    <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1746187864512-1e1c782dbbed?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform" loading="lazy" decoding="async" alt="Product">
+                    </div>
+                    <h4 class="text-sm serif mb-1 font-bold">Solo Signature Cap</h4>
+                    <p class="text-[12px] text-[#ffcc00] font-bold mb-4 ui-font">₹899</p>
+                    <button class="w-full py-4 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 active:bg-[#ffcc00] active:text-black md:hover:bg-[#ffcc00] md:hover:text-black transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="icon-sm"></i> Add to Cart
+                    </button>
+                </div>
+
+                <div class="group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-300 rounded-sm hover:border-[#ffcc00]">
+                    <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1706803501715-8d0e4445e446?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform" loading="lazy" decoding="async" alt="Product">
+                    </div>
+                    <h4 class="text-sm serif mb-1 font-bold">Lightroom Presets</h4>
+                    <p class="text-[12px] text-[#ffcc00] font-bold mb-4 ui-font">₹1,499</p>
+                    <button class="w-full py-4 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 active:bg-[#ffcc00] active:text-black md:hover:bg-[#ffcc00] md:hover:text-black transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="icon-sm"></i> Get Access
+                    </button>
+                </div>
+
+                <div class="group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-300 rounded-sm hover:border-[#ffcc00]">
+                    <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1637689113621-73951984fcc1?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform" loading="lazy" decoding="async" alt="Product">
+                    </div>
+                    <h4 class="text-sm serif mb-1 font-bold">Lens & Latitude Journal</h4>
+                    <p class="text-[12px] text-[#ffcc00] font-bold mb-4 ui-font">₹699</p>
+                    <button class="w-full py-4 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 active:bg-[#ffcc00] active:text-black md:hover:bg-[#ffcc00] md:hover:text-black transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="icon-sm"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <!-- Product 1 -->
-            <div class="shop-card group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-500 rounded-sm">
-                <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform">
-                </div>
-                <h4 class="text-sm serif mb-1 font-bold">Nomad Backpack v1</h4>
-                <p class="text-[12px] text-accent font-bold mb-4 ui-font">₹4,999</p>
-                <button class="w-full py-3 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="shopping-cart" class="icon-sm"></i> Add to Cart
-                </button>
+    <!-- Travel FAQ Section -->
+    <section id="faq" class="py-16 md:py-32 px-5 md:px-24 bg-[#0a0a0a]">
+        <div class="max-w-3xl mx-auto">
+            <div class="mb-10">
+                <h2 class="text-3xl md:text-4xl serif mb-2">Travel FAQ</h2>
+                <p class="text-[#ffcc00] text-xs md:text-sm italic ui-font font-medium">Common questions about the journey.</p>
             </div>
 
-            <!-- Product 2 -->
-            <div class="shop-card group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-500 rounded-sm">
-                <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1746187864512-1e1c782dbbed?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform">
+            <div class="space-y-3 md:space-y-4">
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">1. What is Lens & Latitude about?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">Lens & Latitude is a personal travel and photography platform where I share real travel experiences, visual stories, and practical guides. It focuses on destinations, culture, and storytelling through photography captured during my own journeys.</p>
+                    </div>
                 </div>
-                <h4 class="text-sm serif mb-1 font-bold">Solo Signature Cap</h4>
-                <p class="text-[12px] text-accent font-bold mb-4 ui-font">₹899</p>
-                <button class="w-full py-3 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="shopping-cart" class="icon-sm"></i> Add to Cart
-                </button>
-            </div>
 
-            <!-- Product 3 -->
-            <div class="shop-card group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-500 rounded-sm">
-                <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1706803501715-8d0e4445e446?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform">
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">2. Personally visited destinations?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">Yes. Every destination, photograph, and experience shared on Lens & Latitude is based on places I have personally visited. The content reflects real moments, observations, and learnings from those travels.</p>
+                    </div>
                 </div>
-                <h4 class="text-sm serif mb-1 font-bold">Lightroom Presets</h4>
-                <p class="text-[12px] text-accent font-bold mb-4 ui-font">₹1,499</p>
-                <button class="w-full py-3 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="download" class="icon-sm"></i> Get Access
-                </button>
-            </div>
 
-            <!-- Product 4 -->
-            <div class="shop-card group bg-[#0a0a0a] border border-zinc-900 p-5 transition-all duration-500 rounded-sm">
-                <div class="aspect-square mb-6 overflow-hidden bg-zinc-900 flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1637689113621-73951984fcc1?auto=format&fit=crop&w=400&q=80" class="w-3/4 opacity-80 group-hover:scale-110 transition-transform">
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">3. Self-funded or sponsored?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">Most of my travels are self-funded. If any trip, stay, or experience is sponsored or hosted, it is clearly disclosed within the relevant content. All opinions and recommendations remain honest and independent.</p>
+                    </div>
                 </div>
-                <h4 class="text-sm serif mb-1 font-bold">Lens & Latitude Journal</h4>
-                <p class="text-[12px] text-accent font-bold mb-4 ui-font">₹699</p>
-                <button class="w-full py-3 text-[10px] font-bold ui-font uppercase tracking-widest border border-zinc-800 hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="shopping-cart" class="icon-sm"></i> Add to Cart
-                </button>
+
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">4. Photography gear?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">I shoot all my travel photos using an iPhone 16 Pro and iPhone 16. I don’t use a dedicated camera. My focus is on composition, light, and timing—showing that meaningful travel photography can be created with minimal gear.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">5. Do you edit your photos?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">Yes, photos are edited to maintain consistency and mood while keeping them natural. Editing is used for color correction, exposure balance, and refinement—not heavy manipulation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">6. Suitable for beginners?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">Yes. The guides are designed to be practical and easy to follow, especially for first-time travelers and budget-conscious explorers. I aim to share realistic tips, costs, and alternatives whenever possible.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">7. Usage with credit?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">All photos and written content are protected by copyright. Limited personal use with proper credit may be allowed, but commercial use or redistribution requires prior permission. Please contact me for licensing or usage requests.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">8. Affiliate commissions?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">Yes, some links may be affiliate links, which means I may earn a small commission at no extra cost to you. I only recommend products or tools that I genuinely use or trust.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">9. Frequency of updates?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">New content is published regularly based on travel schedules and creative projects. I prioritize quality, storytelling, and authenticity over fixed posting frequency.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-zinc-900 bg-[#0f0f0f] rounded-sm transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none min-height-48">
+                        <span class="font-bold ui-font text-[10px] md:text-sm uppercase tracking-widest leading-relaxed pr-4">10. Collaboration requests?</span>
+                        <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 transition-transform duration-300 text-zinc-600 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-5 md:px-6">
+                        <p class="text-[#a0a0a0] leading-relaxed text-sm md:text-base">Collaborations are welcome if they align with the values and style of Lens & Latitude. Brands, tourism boards, and creators can reach out via the contact page to discuss partnerships, campaigns, or creative projects.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Social Connect -->
-    <section id="contact" class="bg-[#000000] py-16 md:py-24 px-6 md:px-24 border-t border-zinc-900">
+    <section id="contact" class="bg-[#000000] py-16 md:py-32 px-5 md:px-24 border-t border-zinc-900">
         <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-12 gap-10 md:gap-12 items-start">
-                <!-- Left: Big Heading -->
+            <div class="grid lg:grid-cols-12 gap-10 md:gap-16 items-start">
                 <div class="lg:col-span-5">
-                    <span class="text-accent uppercase tracking-widest text-[10px] font-bold mb-4 block ui-font">Let's Connect</span>
-                    <h2 class="text-4xl md:text-7xl serif leading-[1.1] mb-6 md:mb-8">Follow the <br><span class="italic text-zinc-500">Expedition.</span></h2>
+                    <span class="text-[#ffcc00] uppercase tracking-widest text-[10px] font-bold mb-4 block ui-font">Let's Connect</span>
+                    <h2 class="text-4xl md:text-7xl serif leading-[1.1] mb-5 md:mb-8">Follow the <br><span class="italic text-zinc-500">Expedition.</span></h2>
                     <p class="text-zinc-500 text-base md:text-lg serif italic max-w-sm">The journey is the lens through which we find ourselves.</p>
                 </div>
 
-                <!-- Right: Social Grid -->
                 <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
-                    <!-- Instagram Card -->
-                    <a href="https://www.instagram.com/mr.khilesh__" target="_blank" class="social-card p-8 md:p-10 flex flex-col justify-between aspect-square group rounded-sm">
+                    <a href="https://www.instagram.com/mr.khilesh__" target="_blank" class="bg-[#0a0a0a] border border-zinc-900 p-8 md:p-10 flex flex-col justify-between aspect-square group rounded-sm hover:border-[#ffcc00] transition-all duration-500">
                         <div class="flex justify-between items-start">
-                            <i data-lucide="instagram" class="w-8 h-8 text-accent"></i>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-700 group-hover:text-accent transition-colors"></i>
+                            <i data-lucide="instagram" class="w-8 h-8 text-[#ffcc00]"></i>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-700 group-hover:text-[#ffcc00] transition-colors"></i>
                         </div>
-                        <div>
-                            <p class="ui-font text-[9px] md:text-[10px] uppercase tracking-widest text-zinc-500 mb-2 font-bold">Instagram</p>
-                            <h3 class="serif text-2xl md:text-3xl group-hover:italic transition-all">@mr.khilesh__</h3>
-                            <div class="h-1 w-0 group-hover:w-full bg-accent mt-4 transition-all duration-500"></div>
+                        <div class="mt-8">
+                            <p class="ui-font text-[9px] uppercase tracking-widest text-zinc-500 mb-2 font-bold">Instagram</p>
+                            <h3 class="serif text-2xl md:text-3xl transition-all">@mr.khilesh__</h3>
+                            <div class="h-1 w-0 group-hover:w-full bg-[#ffcc00] mt-4 transition-all duration-500"></div>
                         </div>
                     </a>
 
-                    <!-- YouTube Card -->
-                    <a href="https://www.youtube.com/c/KhileshSammalVlogs2125" target="_blank" class="social-card p-8 md:p-10 flex flex-col justify-between aspect-square group rounded-sm">
+                    <a href="https://www.youtube.com/c/KhileshSammalVlogs2125" target="_blank" class="bg-[#0a0a0a] border border-zinc-900 p-8 md:p-10 flex flex-col justify-between aspect-square group rounded-sm hover:border-[#ffcc00] transition-all duration-500">
                         <div class="flex justify-between items-start">
-                            <i data-lucide="youtube" class="w-8 h-8 text-accent"></i>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-700 group-hover:text-accent transition-colors"></i>
+                            <i data-lucide="youtube" class="w-8 h-8 text-[#ffcc00]"></i>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-700 group-hover:text-[#ffcc00] transition-colors"></i>
                         </div>
-                        <div>
-                            <p class="ui-font text-[9px] md:text-[10px] uppercase tracking-widest text-zinc-500 mb-2 font-bold">YouTube Channel</p>
-                            <h3 class="serif text-2xl md:text-3xl group-hover:italic transition-all leading-tight">Khilesh Sammal Vlogs</h3>
-                            <div class="h-1 w-0 group-hover:w-full bg-accent mt-4 transition-all duration-500"></div>
+                        <div class="mt-8">
+                            <p class="ui-font text-[9px] uppercase tracking-widest text-zinc-500 mb-2 font-bold">YouTube</p>
+                            <h3 class="serif text-xl md:text-3xl transition-all leading-tight">Khilesh Sammal Vlogs</h3>
+                            <div class="h-1 w-0 group-hover:w-full bg-[#ffcc00] mt-4 transition-all duration-500"></div>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <!-- Global Presence Ticker -->
-            <div class="mt-16 md:mt-24 pt-8 md:pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
-                <div class="flex items-center gap-4">
-                    <div class="text-[10px] md:text-sm uppercase tracking-[0.2em] md:tracking-[0.4em] text-accent font-bold ui-font flex items-center gap-3">
-                        <i data-lucide="globe" class="w-4 h-4 md:w-5 md:h-5"></i> Lens & Latitude — 2025
-                    </div>
+            <div class="mt-16 md:mt-24 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-[10px] md:text-sm uppercase tracking-[0.2em] md:tracking-[0.4em] text-[#ffcc00] font-bold ui-font flex items-center gap-3">
+                    <i data-lucide="globe" class="w-4 h-4 md:w-5 md:h-5"></i> Lens & Latitude — 2025
                 </div>
                 <div class="flex gap-6 md:gap-10">
-                    <a href="mailto:khileshsammal.work@gmail.com" class="text-[9px] md:text-[10px] uppercase tracking-widest font-bold ui-font hover:text-accent transition-colors">Email Me</a>
-                    <a href="mailto:khileshsammal.work@gmail.com" class="text-[9px] md:text-[10px] uppercase tracking-widest font-bold ui-font hover:text-accent transition-colors">Collaborations</a>
+                    <a href="mailto:khileshsammal.work@gmail.com" class="text-[9px] md:text-[10px] uppercase tracking-widest font-bold ui-font hover:text-[#ffcc00] transition-colors">Email Me</a>
+                    <a href="mailto:khileshsammal.work@gmail.com" class="text-[9px] md:text-[10px] uppercase tracking-widest font-bold ui-font hover:text-[#ffcc00] transition-colors">Collaborations</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#000000] pb-12 px-6 md:px-24">
-        <div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center text-[9px] md:text-[10px] text-zinc-800 uppercase tracking-widest ui-font font-bold gap-4 text-center">
+    <footer class="bg-[#000000] pb-12 px-6 md:px-24 border-t border-zinc-900/50">
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-[9px] md:text-[10px] text-zinc-700 uppercase tracking-widest ui-font font-bold gap-4 text-center">
             <p>&copy; 2026 KHILESH SAMMAL. ALL RIGHTS RESERVED.</p>
-            <div class="space-x-4 md:space-x-6">
+            <div class="flex space-x-4 md:space-x-6">
                 <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-white transition-colors">Shipping</a>
                 <a href="mailto:khileshsammal.work@gmail.com" class="hover:text-white transition-colors">Contact</a>
@@ -489,43 +567,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <script>
-        lucide.createIcons();
+        // Use requestIdleCallback for icon creation to boost initial load
+        const initIcons = () => lucide.createIcons();
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(initIcons);
+        } else {
+            setTimeout(initIcons, 100);
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(el => {
+                if (el !== item) el.classList.remove('active');
+            });
+
+            // Toggle current
+            item.classList.toggle('active');
+        }
+
+        // Header Scroll Logic - Throttled for Performance
+        const header = document.getElementById('main-header');
+        let lastScrollY = 0;
+        let ticking = false;
 
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(0,0,0,0.95)';
-                header.style.paddingTop = '0.75rem';
-                header.style.paddingBottom = '0.75rem';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.backgroundColor = 'transparent';
-                header.style.paddingTop = window.innerWidth < 768 ? '1rem' : '1.5rem';
-                header.style.paddingBottom = window.innerWidth < 768 ? '1rem' : '1.5rem';
-                header.style.backdropFilter = 'none';
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('bg-black/98', 'backdrop-blur-md', 'py-2', 'shadow-2xl');
+                        header.classList.remove('from-black/95', 'to-transparent', 'py-3', 'md:py-6');
+                    } else {
+                        header.classList.remove('bg-black/98', 'backdrop-blur-md', 'py-2', 'shadow-2xl');
+                        header.classList.add('from-black/95', 'to-transparent', 'py-3', 'md:py-6');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
-        });
+        }, { passive: true });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
+        // Directory Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const storyCards = document.querySelectorAll('.story-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                storyCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                        requestAnimationFrame(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        });
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px)';
+                        setTimeout(() => card.style.display = 'none', 400);
+                    }
+                });
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
         });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
